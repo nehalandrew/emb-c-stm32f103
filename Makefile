@@ -189,4 +189,7 @@ clean:
 #######################################
 -include $(wildcard $(BUILD_DIR)/*.d)
 
+flash: all
+	openocd -f interface/stlink.cfg -f target/stm32g4x.cfg -c "program $(BUILD_DIR)/$(TARGET).elf verify reset exit"
+
 # *** EOF ***
