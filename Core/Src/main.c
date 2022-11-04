@@ -89,6 +89,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+  char a[] = "Hello world";
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -106,9 +107,9 @@ int main(void)
     }
 
     HAL_GPIO_WritePin(LED13_GPIO_Port, LED13_Pin, GPIO_PIN_RESET);
-    delay(500000);
+    delay(5000000);
     HAL_GPIO_WritePin(LED13_GPIO_Port, LED13_Pin, GPIO_PIN_SET);
-    delay(500000);
+    delay(5000000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
